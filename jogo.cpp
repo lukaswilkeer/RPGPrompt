@@ -22,14 +22,11 @@ using namespace std;
 	static float person[3] = {10,10,100};
 
 	/* Declração dos poderes */
-	static float soco = 5;
-	static float chute = 6;
-	static float defesabasica = 10;
 	static int poderes[3] = {5,6,10};
 
 	/* Variaveis usadas para realizar o Combo */
+	int num_aleatorio;
 	int golpe1, golpe2, golpe3;
-
 
 	/* Formula para calculo do dano, soco+atk+exp. */
 	static int dano_lukas;
@@ -37,12 +34,6 @@ using namespace std;
 	static float life_lukas = 100;
 	static float life_boot = 100;
 	static int life_boot_inicial = 100;
-	/* Array com os poderes pelos poderes e pelos ganhos de XP para liberação.
-	Declara a matriz.
-	array[1][1] = {codigo do golpe};
-	array[1][2] = {dano do golpe};
-	array[1][3] = {quanto de xp precisa para ser liberado} 
-	static float poderes[5][2]; */
 
 int main(){
 
@@ -63,7 +54,7 @@ int main(){
 				cout << "3 --- Defesa basica" << endl;				
 
 				/* Código reposavél por gerenciar o COMBO! */
-				int num_aleatorio = rand() % 5 + 0;
+				num_aleatorio = rand() % 5 + 0;
 				if (num_aleatorio >= 4)
 				{
 					cout << "Combo! Você ganhou a chance de realizar um combo!" << endl;
